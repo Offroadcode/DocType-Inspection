@@ -7,3 +7,6 @@ Umbraco.Test/
 DocTypeInspection/Umbraco/packages/
 DocTypeInspection/Umbraco/DocTypeInspection/bin/
 DocTypeInspection/Umbraco/DocTypeInspection/obj/
+DocTypeInspection/Umbraco/DocTypeInspection/packages/
+DocTypeInspection/Umbraco/DocTypeInspection/DocTypeInspection/obj/Debug/
+DocTypeInspection/Umbraco/DocTypeInspection/App_Data/NuGetBackup/

@@ -1,0 +1,27 @@
+﻿using System.Linq;
+using System.Web.Http;
+using DocTypeInspection.Controllers.Attributes;
+using DocTypeInspection.Models;
+using DocTypeInspection.Models.ViewModels;
+using Umbraco.Web.Editors;
+using Umbraco.Web.WebApi;
+
+namespace DocTypeInspection.Controllers.Api
+{
+    //[IsBackOffice]
+    [CamelCaseController]
+    public class DocTypeApiController : UmbracoApiController
+    {
+        [HttpGet]
+        public DocTypeViewModel GetDocTypeInformation()
+        {
+            return new DocTypeViewModel
+            {
+                Id = 1234,
+                AllowAtRoot = true,
+                Description = "This is a test",
+                Templates = Enumerable.Empty<Template>()
+            };
+        }
+    }
+}

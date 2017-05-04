@@ -46,7 +46,9 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
-            'DocTypeInspection/controllers/context.menu.controller.js'
+			'DocTypeInspection/resources/doctype.info.api.resource.js',
+			'DocTypeInspection/controllers/context.menu.controller.js',
+			'DocTypeInspection/directives/context.menu.directive.js'
         ],
         dest: '<%= basePath %>/js/docTypeInspection.js'
       }
@@ -145,9 +147,13 @@ module.exports = function(grunt) {
         ],
       js: [
         'DocTypeInspection/controllers/*.js',
+		'DocTypeInspection/interceptors/*.js',
 		'DocTypeInspection/models/*.js',
         'DocTypeInspection/directives/*.js',
+		'DocTypeInspection/resources/*.js',
 		'!DocTypeInspection/controllers/context.menu.controller.js',
+		'!DocTypeInspection/directives/context.menu.directive.js',
+		'!DocTypeInspection/resources/doctype.info.api.resource.js'
       ],
       css: [
         'DocTypeInspection/css/*.css',
