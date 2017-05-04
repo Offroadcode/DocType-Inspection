@@ -1,0 +1,5 @@
+{
+	javascript: [
+		"~/app_plugins/DocTypeInspection/js/docTypeInspection.js"
+	],
+}

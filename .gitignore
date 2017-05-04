@@ -1,0 +1,9 @@
+dist/
+node_modules/
+tmp/
+pkg/
+Umbraco.Test/
+.sass-cache/
+DocTypeInspection/Umbraco/packages/
+DocTypeInspection/Umbraco/DocTypeInspection/bin/
+DocTypeInspection/Umbraco/DocTypeInspection/obj/
