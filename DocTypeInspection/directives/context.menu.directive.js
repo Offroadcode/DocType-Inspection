@@ -4,6 +4,10 @@ angular.module('umbraco.directives')
       var directive, link;
       directive = $delegate[0];
 
+      directive.controller = function($scope, $timeout) {
+        angular.extend(this, $controller('DocTypeInfo.ContextMenu.Controller', {$scope: $scope}));
+      };
+
       var compile = directive.compile;
       directive.compile = function() {
         var link = compile.apply(this, arguments);

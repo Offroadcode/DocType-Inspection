@@ -1,13 +1,24 @@
 <div>
     <div class='umb-modalcolumn-header'>
         <h1>{{menuDialogTitle}}</h1>
-        <p>{{currentNode.id}}</p>
+        <p><b>Id:</b> {{currentNode.id}}</p>
     </div>
 
     <div class='umb-modalcolumn-body'>
-        <div class="umb-actions" ng-show="currentSection == 'content'">
-            <div class="well">
-                <p>{{id}}</p>
+        <div class="umb-actions" ng-show="currentSection == 'content' && docType">
+            <div class="well" ng-class="{'alert-danger': docType.status == 0}">
+                <h5>Overview {{docType.status == 0 ? "&bull; Unpublished! ": ""}}
+                </h5>
+                <p><b>DocType:</b> {{currentNode.metaData.contentType}}</p>
+                <p ng-show="docType.description">{{docType.description}}</p>
+                <p><b>Allowed At Root:</b> {{docType.allowAtRoot ? 'yes' : 'no'}}</p>
+                <p ng-show="docType.templates"><b>Allowed Templates:</b><br/>
+                    <span ng-repeat="template in docType.templates">{{template.alias}} ({{template.id}})<br/></span>
+                </p>
+                <p>
+                    <b>Created:</b> {{docType.createdOn}} by {{docType.createdBy}}<br/>
+                    <b>Last Edited:</b> {{docType.lastEditedOn}} by {{docType.lastEditedBy}}
+                </p>
             </div>
         </div>
         <ul class="umb-actions">
