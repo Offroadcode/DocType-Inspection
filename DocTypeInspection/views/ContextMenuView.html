@@ -5,7 +5,7 @@
     </div>
 
     <div class='umb-modalcolumn-body'>
-        <div class="umb-actions" ng-show="currentSection == 'content' && docType">
+        <div class="umb-actions" ng-show="currentSection == 'content' && docType && currentNode.id != -1">
             <div class="well" ng-class="{'alert-danger': docType.status == 0}">
                 <h5>Overview {{docType.status == 0 ? "&bull; Unpublished! ": ""}}
                 </h5>
